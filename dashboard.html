@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="main_dash">
+
+    <h1>Welcome, {{ username }}</h1>
+
+    <h2>Upload File</h2>
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload</button>
+
+    <h2>Search Files</h2>
+    <input type="text" id="searchInput" placeholder="Search files...">
+    <button onclick="searchFiles()">Search</button>
+
+    <ul id="fileList"></ul>
+
+    <a href="/logout">Logout</a>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+   
+
+</div>
+</body>
+</html>
